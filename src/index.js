@@ -12,7 +12,7 @@ const io = socketIO(server);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
-
+const port = process.env.PORT || 3000;
 // middlewares
 
 // routes
@@ -25,6 +25,6 @@ require('./sockets')(io);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // starting the server
-server.listen(3000, () => {
-  console.log('Server on port', 3000);
+server.listen(port, () => {
+    console.log('Server on port', port);
 });
