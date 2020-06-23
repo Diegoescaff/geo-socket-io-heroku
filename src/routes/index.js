@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const path = require('path');
 
-router.get('/geo', (req, res) => {
+router.get('/', (req, res) => {
     res.render('index');
 });
 
